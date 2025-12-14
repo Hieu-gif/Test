@@ -45,18 +45,7 @@ char blocks[][4][4] = {
 int x = 4, y = 0, b = 0;
 int score = 0;
 int dropDelay = 200;  
-void hideCursor() {
-    CONSOLE_CURSOR_INFO ci;
-    ci.dwSize = 1;
-    ci.bVisible = FALSE;
-    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &ci);
-}       
-void hideCursor() {
-    CONSOLE_CURSOR_INFO ci;
-    ci.dwSize = 1;
-    ci.bVisible = FALSE;
-    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &ci);
-}     
+
 void gotoxy(int x, int y) {
     COORD c = { (SHORT)x, (SHORT)y };
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
